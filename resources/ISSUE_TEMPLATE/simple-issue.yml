@@ -1,0 +1,37 @@
+name: Guide for a Quick Issue
+description: A guide to help you create a quick issue with clear and measurable completion criteria.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A standardized template to guide users in creating quick issues with clear and measurable completion criteria.
+        This template is intended to help you track small and quick tasks that can be completed in a short amount of time.
+        This type of issue is usually a sub-issue to a larger batch work type of issue.
+  - type: textarea
+    id: problemStatement
+    attributes:
+      label: "🚩 Problem Statement"
+      description: "What is the specific issue or challenge that needs to be addressed?"
+      placeholder: ex. Need access to repository A in order to pull data...
+    validations:
+      required: true
+  - type: textarea
+    id: proposedSolution
+    attributes:
+      label: "💡 Proposed Solution"
+      description: How will this sub-issue be resolved? What actions are required to address the problem?
+      placeholder: ex. Submit a request to the Security team to grant access to repository A...
+    validations:
+      required: true
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request Type
+      description: |
+        This is used to filter issue priority.
+      multiple: false
+      options:
+        - bug
+        - improvement
+        - documentation
+        - design
