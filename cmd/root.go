@@ -39,7 +39,7 @@ func RootCmd() {
 	for _, repo := range repos {
 		fmt.Printf("Submitting pull request for %s/%s...\n", owner, repo)
 		// Submit the pull request
-		err = gh.SubmitPullRequest(owner, repo)
+		err := gh.SubmitPullRequest(owner, repo)
 		if err != nil {
 			fmt.Printf("Error submitting pull request for %s/%s: %v", owner, repo, err)
 			os.Exit(1)
