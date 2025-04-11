@@ -42,7 +42,7 @@ func RootCmd() {
 		err := gh.SubmitPullRequest(owner, repo)
 		if err != nil {
 			fmt.Printf("Error submitting pull request for %s/%s: %v", owner, repo, err)
-			os.Exit(1)
+			continue
 		}
 
 		fmt.Printf("Pull request submitted successfully for %s/%s...\n", owner, repo)
