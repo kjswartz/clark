@@ -30,7 +30,7 @@ func NewGitHubClient() (gitHubClient *GitHubClient, err error) {
 	return &GitHubClient{client: gh}, nil
 }
 
-// SubmitIssue submits an issue to GitHub.
+// SubmitPullRequest submits a pull-request to GitHub.
 func (gh GitHubClient) SubmitPullRequest(owner, repo string) error {
 	head := "clark-install-branch"
 
